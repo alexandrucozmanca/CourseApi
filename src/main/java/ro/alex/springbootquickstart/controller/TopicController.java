@@ -12,13 +12,12 @@ import java.util.List;
 @RestController
 public class TopicController {
 
+    @Autowired
+    private TopicService topicService;
+
     @RequestMapping("/topics")
     public List<Topic> getAllTopics(){
-        return Arrays.asList(
-                new Topic("spring", "Spring Framework", "SpringFramework Description"),
-                new Topic("java", "Core Java", "CoreJava Description"),
-                new Topic("javascript", "Java Script", "Java Script Description")
-        );
+        return topicService.getAllTopics();
     }
 
 }
