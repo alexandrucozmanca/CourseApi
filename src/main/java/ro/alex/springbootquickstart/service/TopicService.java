@@ -6,7 +6,6 @@ import ro.alex.springbootquickstart.domain.Topic;
 import ro.alex.springbootquickstart.repositories.TopicRepository;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -22,20 +21,20 @@ public class TopicService {
         return topics;
     }
 
-    public Topic getTopic(String id){
-        return topicRepository.findOne(id);
+    public Topic getTopic(String topicId){
+        return topicRepository.findOne(topicId);
     }
 
     public void addTopic(Topic topic) {
         topicRepository.save(topic);
     }
 
-    public void updateTopic(Topic topic, String id) {
+    public void updateTopic(Topic topic, String topicId) {
         topicRepository.save(topic);
     }
 
-       public void deleteTopic(String id) {
-        topicRepository.delete(id);
+    public void deleteTopic(String topicId) {
+        topicRepository.delete(topicId);
     }
 
 }
