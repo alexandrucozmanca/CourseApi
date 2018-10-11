@@ -3,9 +3,8 @@ package ro.alex.springbootquickstart.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import ro.alex.springbootquickstart.domain.Course;
-import ro.alex.springbootquickstart.domain.Lesson;
-import ro.alex.springbootquickstart.repositories.LessonRepository;
 import ro.alex.springbootquickstart.service.LessonService;
+import ro.alex.springbootquickstart.domain.Lesson;
 
 import java.util.List;
 

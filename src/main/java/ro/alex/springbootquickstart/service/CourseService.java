@@ -22,13 +22,13 @@ public class CourseService {
     }
 
     public Course getCourse(String id) {
-        return courseRepository.findOne(id);
+        return courseRepository.findById(id).get();
     }
 
     public void addCourse(Course course) {courseRepository.save(course);}
 
     public void updateCourse(Course course) {courseRepository.save(course);}
 
-    public void deleteCourse(String id) {courseRepository.delete(id);}
+    public void deleteCourse(String id) {courseRepository.deleteById(id);}
 
 }
